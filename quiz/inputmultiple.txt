@@ -1,0 +1,12 @@
+<?php
+for($i=1;$i<=2;$i++)
+{
+      $query="Select question,choice1,choice2,choice3,answer from quiz where quizid='$i";
+      $rs=mysqli_query($con,$query);
+      $row=mysqli_fetch_array($rs);
+      echo "<h1>".$row['question']."</h1>";
+	echo $row['choice1']."<br>";
+	echo $row['choice2']."<br>";
+	echo $row['choice3']."<br>";
+	echo $row['answer']."<br>";
+}?>
